@@ -1,0 +1,12 @@
+{% extends "survey/base.html" %}
+{% load widget_tweaks %}
+
+{% block title %}Delete{% endblock %}
+{% block main %}
+	<form method="POST">
+		{% csrf_token %}
+		<h2>Are you sure you want to remove {{ question.question }}?</h2>
+	    <button type="submit">Confirm</button>
+	</form>
+
+{% endblock %}
